@@ -1,0 +1,226 @@
+/* Base & Reset */
+:root {
+    --bg-color: #e5dfd3; /* Tan/beige matching the picture background */
+    --border-color: #000;
+    --box-shadow: 6px 6px 0px #000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Luckiest Guy', cursive; /* Chunky cartoony font */
+    background-color: var(--bg-color);
+    background-image: repeating-linear-gradient(45deg, rgba(0,0,0,0.02) 25%, transparent 25%, transparent 75%, rgba(0,0,0,0.02) 75%, rgba(0,0,0,0.02)), repeating-linear-gradient(45deg, rgba(0,0,0,0.02) 25%, var(--bg-color) 25%, var(--bg-color) 75%, rgba(0,0,0,0.02) 75%, rgba(0,0,0,0.02));
+    background-position: 0 0, 10px 10px;
+    background-size: 20px 20px;
+    color: #000;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Layout */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+/* Mario Style Header */
+.mario-header {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 6rem;
+    letter-spacing: 5px;
+    margin-top: 1rem;
+    text-shadow: 4px 4px 0 #000;
+    -webkit-text-stroke: 3px #000;
+    animation: bounceIn 1s cubic-bezier(0.28, 0.84, 0.42, 1);
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0.5); opacity: 0; }
+    50% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); }
+}
+
+.letter {
+    display: inline-block;
+    transition: transform 0.2s;
+    cursor: default;
+}
+
+.letter:hover {
+    transform: translateY(-10px) rotate(-5deg);
+}
+
+.dollar { color: #fff; }
+.blue { color: #00A2E8; } /* Mario Blue */
+.yellow { color: #FFF200; } /* Mario Yellow */
+.red { color: #ED1C24; } /* Mario Red */
+.green { color: #22B14C; } /* Mario Green */
+
+/* Logo Section */
+.logo-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#main-logo {
+    width: 100%;
+    max-width: 500px; /* Perfect for the square image */
+    height: auto;
+    border: 6px solid #000;
+    border-radius: 16px;
+    box-shadow: 10px 10px 0 #000;
+    background-color: var(--bg-color); /* Matches the original meme background */
+    transition: transform 0.2s;
+}
+
+#main-logo:hover {
+    transform: scale(1.02) rotate(1deg);
+}
+
+/* Retro Box Components */
+.retro-box {
+    background-color: #fff;
+    border: 4px solid #000;
+    border-radius: 12px;
+    box-shadow: var(--box-shadow);
+    padding: 1.5rem;
+}
+
+/* Info Section */
+.info-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.ca-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: 700px;
+    background-color: #FFB6C1; /* Light pink retro pop */
+}
+
+.ca-label {
+    font-size: 1.5rem;
+    color: #000;
+    -webkit-text-stroke: 1px #000;
+}
+
+#ca-text {
+    font-family: 'VT323', monospace;
+    font-size: 1.6rem;
+    background: #000;
+    color: #39FF14; /* Hacker green */
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    border: 2px solid #000;
+    word-break: break-all;
+    flex-grow: 1;
+    text-align: center;
+    user-select: all;
+}
+
+#copy-btn {
+    font-family: 'Luckiest Guy', cursive;
+    background-color: #FFF200;
+    color: #000;
+    border: 3px solid #000;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 4px 4px 0 #000;
+    transition: all 0.1s;
+}
+
+#copy-btn:active {
+    transform: translate(4px, 4px);
+    box-shadow: 0 0 0 #000;
+}
+
+/* Telegram Button */
+.retro-btn {
+    display: inline-block;
+    font-family: 'Luckiest Guy', cursive;
+    background-color: #00A2E8; /* Telegram blue */
+    color: #fff;
+    text-decoration: none;
+    font-size: 2.5rem;
+    padding: 1rem 3rem;
+    border: 4px solid #000;
+    border-radius: 12px;
+    box-shadow: 8px 8px 0 #000;
+    -webkit-text-stroke: 1.5px #000;
+    transition: all 0.1s;
+}
+
+.retro-btn:active {
+    transform: translate(8px, 8px);
+    box-shadow: 0 0 0 #000;
+}
+
+/* Chart Section */
+.chart-section {
+    width: 100%;
+}
+
+.chart-container {
+    background-color: #B5E61D; /* Light green retro background */
+    width: 100%;
+    padding: 1.5rem;
+}
+
+.chart-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #fff;
+    -webkit-text-stroke: 2px #000;
+    text-shadow: 3px 3px 0 #000;
+}
+
+#dexscreener-embed {
+    position: relative;
+    width: 100%;
+    padding-bottom: 60%;
+    border: 4px solid #000;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #000;
+}
+
+#dexscreener-embed iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .mario-header { font-size: 4rem; -webkit-text-stroke: 2px #000; text-shadow: 3px 3px 0 #000; }
+    .ca-box { flex-direction: column; }
+    #ca-text { font-size: 1.2rem; }
+    .retro-btn { font-size: 1.8rem; padding: 1rem 2rem; }
+    #dexscreener-embed { padding-bottom: 120%; }
+}

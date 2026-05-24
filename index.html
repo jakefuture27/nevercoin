@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="$PTSD Solana Memecoin">
+    <title>$PTSD | OG Memecoin</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Mario Style Header -->
+        <header class="mario-header">
+            <span class="letter dollar">$</span>
+            <span class="letter blue">P</span>
+            <span class="letter yellow">T</span>
+            <span class="letter red">S</span>
+            <span class="letter green">D</span>
+        </header>
+
+        <!-- Main Logo Section -->
+        <section class="logo-section">
+            <img src="./icon.png" alt="$PTSD Meme Image" id="main-logo" onerror="this.src='https://via.placeholder.com/500x500/d5d0c4/000000?text=Save+your+image+as+icon.png'">
+        </section>
+
+        <!-- Information / Links -->
+        <section class="info-section">
+            <div class="retro-box ca-box">
+                <span class="ca-label">CA:</span>
+                <code id="ca-text">3pXiBK4Xrw3Ey32gTFSe1qBg99dhFpJqsWd75hGtpump</code>
+                <button id="copy-btn" title="Copy to clipboard">COPY</button>
+            </div>
+            
+            <a href="https://t.me/ptsdcoinsol" target="_blank" class="retro-btn telegram-btn">
+                JOIN TELEGRAM
+            </a>
+        </section>
+
+        <!-- Dexscreener Chart -->
+        <section class="chart-section">
+            <div class="retro-box chart-container">
+                <h2 class="chart-title">LIVE CHART</h2>
+                <div id="dexscreener-embed">
+                    <iframe src="https://dexscreener.com/solana/3pXiBK4Xrw3Ey32gTFSe1qBg99dhFpJqsWd75hGtpump?embed=1&theme=dark&trades=0&info=0"></iframe>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
