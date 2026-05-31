@@ -13,6 +13,23 @@
 <body>
     <div class="paper-texture"></div>
 
+    <!-- Intro Screen -->
+    <div id="intro-screen">
+        <h1 class="intro-title rainbow-text">MAKE YOUR CHOICE</h1>
+        <div class="pill-container">
+            <button id="hold-pill" class="pill green-pill">HOLD</button>
+            <button id="miss-out-pill" class="pill red-pill">MISS OUT</button>
+        </div>
+    </div>
+
+    <!-- Jumpscare Screen -->
+    <div id="jumpscare-screen" style="display: none;">
+        <h1 class="jumpscare-text">YOU MISSED OUT!</h1>
+    </div>
+
+    <!-- Main Site Content (Hidden Initially) -->
+    <div id="main-site" style="display: none;">
+
     <!-- Socials Top Right -->
     <div class="top-socials">
         <a href="https://x.com/homoonsolanas" target="_blank" class="social-btn">
@@ -64,6 +81,7 @@
         </section>
 
     </div>
+    </div> <!-- End Main Site -->
 
     <script src="script.js"></script>
 </body>

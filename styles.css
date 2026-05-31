@@ -301,8 +301,108 @@ body {
     100% { transform: translate(0, 0) rotate(360deg); }
 }
 
+/* Intro Screen */
+#intro-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg-blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 1s ease;
+}
+
+.intro-title {
+    font-size: 6rem;
+    margin-bottom: 4rem;
+    -webkit-text-stroke: 3px #000;
+    text-shadow: 6px 6px 0 #000;
+    text-align: center;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.pill-container {
+    display: flex;
+    gap: 3rem;
+}
+
+.pill {
+    font-family: 'Bangers', cursive;
+    font-size: 3rem;
+    padding: 1.5rem 4rem;
+    border: 6px solid #000;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 8px 8px 0 #000;
+    transition: all 0.2s;
+    color: #fff;
+    -webkit-text-stroke: 1px #000;
+}
+
+.green-pill {
+    background-color: #39FF14;
+}
+
+.red-pill {
+    background-color: #FF0000;
+}
+
+.pill:hover {
+    transform: scale(1.1);
+    box-shadow: 12px 12px 0 #000;
+}
+
+.pill:active {
+    transform: scale(0.95);
+    box-shadow: 4px 4px 0 #000;
+}
+
+/* Jumpscare Screen */
+#jumpscare-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    animation: flash 0.1s infinite;
+}
+
+.jumpscare-text {
+    font-size: 15rem;
+    color: #fff;
+    -webkit-text-stroke: 4px #000;
+    text-shadow: 10px 10px 0 #000;
+    text-align: center;
+    line-height: 1;
+    transform: rotate(-10deg);
+}
+
+@keyframes flash {
+    0% { background-color: red; }
+    50% { background-color: black; }
+    100% { background-color: white; }
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .title { font-size: 5rem; }
     .subtitle { font-size: 1.8rem; }
+    .intro-title { font-size: 4rem; }
+    .pill-container { flex-direction: column; gap: 1.5rem; }
+    .jumpscare-text { font-size: 6rem; }
 }

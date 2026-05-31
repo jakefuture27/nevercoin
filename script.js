@@ -1,4 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Intro Screen Logic
+    const introScreen = document.getElementById('intro-screen');
+    const mainSite = document.getElementById('main-site');
+    const jumpscareScreen = document.getElementById('jumpscare-screen');
+    const holdPill = document.getElementById('hold-pill');
+    const missOutPill = document.getElementById('miss-out-pill');
+
+    if (holdPill && missOutPill) {
+        holdPill.addEventListener('click', () => {
+            introScreen.style.opacity = '0';
+            setTimeout(() => {
+                introScreen.style.display = 'none';
+                mainSite.style.display = 'block';
+            }, 1000); // 1s fade out
+        });
+
+        missOutPill.addEventListener('click', () => {
+            jumpscareScreen.style.display = 'flex';
+            setTimeout(() => {
+                jumpscareScreen.style.display = 'none';
+            }, 2000); // Hide jumpscare after 2 seconds
+        });
+    }
+
     // Generate floating fists
     const container = document.getElementById('floating-balls-container');
     const numBalls = 60; // Generate 60 fists everywhere
