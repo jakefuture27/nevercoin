@@ -247,6 +247,41 @@ body {
     border: 0;
 }
 
+/* Floating Balls */
+.floating-balls {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.ball {
+    position: absolute;
+    width: 80px;
+    height: auto;
+    opacity: 0.15;
+    filter: blur(2px);
+    animation: floatAround 20s infinite ease-in-out alternate;
+}
+
+.b1 { top: 10%; left: 10%; animation-duration: 25s; animation-delay: 0s; width: 120px; }
+.b2 { top: 70%; left: 80%; animation-duration: 22s; animation-delay: -5s; width: 90px; }
+.b3 { top: 40%; left: 20%; animation-duration: 18s; animation-delay: -10s; width: 70px; }
+.b4 { top: 80%; left: 30%; animation-duration: 28s; animation-delay: -15s; width: 150px; }
+.b5 { top: 20%; left: 70%; animation-duration: 20s; animation-delay: -2s; width: 100px; }
+.b6 { top: 50%; left: 90%; animation-duration: 24s; animation-delay: -8s; width: 80px; }
+
+@keyframes floatAround {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    33% { transform: translate(100px, -150px) rotate(120deg); }
+    66% { transform: translate(-50px, 100px) rotate(240deg); }
+    100% { transform: translate(0, 0) rotate(360deg); }
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .title { font-size: 4rem; }
