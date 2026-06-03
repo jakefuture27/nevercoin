@@ -3,28 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="$HOMO - Hold Or Miss Out">
-    <title>$HOMO | Hold Or Miss Out</title>
+    <meta name="description" content="$NEVER - Never Kill Yourself">
+    <title>$NEVER | Never Kill Yourself</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="paper-texture"></div>
+    <div class="star-texture"></div>
 
     <!-- Intro Screen -->
     <div id="intro-screen">
-        <h1 class="intro-title rainbow-text">MAKE YOUR CHOICE</h1>
+        <h1 class="intro-title neon-blue-text">MAKE YOUR CHOICE</h1>
         <div class="pill-container">
-            <button id="hold-pill" class="pill green-pill">HOLD</button>
-            <button id="miss-out-pill" class="pill red-pill">MISS OUT</button>
+            <button id="hold-pill" class="pill green-pill">LIVE</button>
+            <button id="miss-out-pill" class="pill red-pill">GIVE UP</button>
         </div>
     </div>
 
     <!-- Jumpscare Screen -->
     <div id="jumpscare-screen" style="display: none;">
-        <h1 class="jumpscare-text">YOU MISSED OUT!</h1>
+        <h1 class="jumpscare-text">NEVER GIVE UP!</h1>
     </div>
 
     <!-- Main Site Content (Hidden Initially) -->
@@ -44,21 +44,21 @@
     <div class="floating-balls" id="floating-balls-container"></div>
 
     <div class="marquee-container">
-        <div class="marquee-content rainbow-text">
-            HOLD OR MISS OUT $HOMO HOLD OR MISS OUT $HOMO HOLD OR MISS OUT $HOMO
+        <div class="marquee-content neon-blue-text">
+            NEVER KILL YOURSELF $NEVER NEVER KILL YOURSELF $NEVER NEVER KILL YOURSELF $NEVER
         </div>
     </div>
 
     <div class="container">
         <!-- Header -->
         <header class="homo-header">
-            <h1 class="title rainbow-text" data-text="$HOMO">$HOMO</h1>
-            <h2 class="subtitle">HOLD OR MISS OUT</h2>
+            <h1 class="title neon-blue-text" data-text="$NEVER">$NEVER</h1>
+            <h2 class="subtitle">NEVER KILL YOURSELF</h2>
         </header>
 
         <!-- Main Logo Section -->
         <section class="logo-section">
-            <img src="./homo.png" alt="Arthur Rainbow Fist" id="main-logo" onerror="this.src='https://via.placeholder.com/800x800/ffcc00/ffffff?text=Save+image+as+homo.png'">
+            <img src="./never.png" alt="Never Kill Yourself Glow" id="main-logo" onerror="this.src='https://via.placeholder.com/800x400/000000/00f3ff?text=Save+image+as+never.png'">
         </section>
 
         <!-- Information / Links -->
@@ -67,16 +67,6 @@
                 <span class="ca-label">CA:</span>
                 <code id="ca-text">HziPQunVCQN6Knjxv96pEjqLxpJsZ7KFvHGV7TVEpump</code>
                 <button id="copy-btn" title="Copy to clipboard">COPY</button>
-            </div>
-        </section>
-
-        <!-- Dexscreener Chart -->
-        <section class="chart-section">
-            <div class="retro-box chart-container">
-                <h2 class="chart-title rainbow-text">LIVE CHART</h2>
-                <div id="dexscreener-embed">
-                    <iframe src="https://dexscreener.com/solana/HziPQunVCQN6Knjxv96pEjqLxpJsZ7KFvHGV7TVEpump?embed=1&theme=dark&trades=0&info=0"></iframe>
-                </div>
             </div>
         </section>
 

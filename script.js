@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (container) {
         for (let i = 0; i < numBalls; i++) {
             const ball = document.createElement('img');
-            ball.src = './homo.png';
+            ball.src = './never.png';
             ball.classList.add('ball');
             
             // Randomize properties
