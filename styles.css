@@ -41,6 +41,57 @@ body {
     100% { background-position: -550px -550px, -310px -490px, -120px -280px, -80px -50px; }
 }
 
+/* CRT Effects */
+.crt-tint {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 900;
+    background: rgba(0, 50, 100, 0.05);
+}
+
+.crt-scanlines {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 901;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    background-size: 100% 4px, 6px 100%;
+}
+
+.crt-phosphor {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 902;
+    background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 0, 0, 0.18) 2px, rgba(0, 0, 0, 0.18) 4px);
+}
+
+.crt-vignette {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 903;
+    background: radial-gradient(ellipse at center, transparent 40%, rgba(0, 0, 0, 0.75) 100%);
+}
+
+.crt-flicker {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 904;
+    background: rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: crtFlicker 0.15s infinite;
+}
+
+@keyframes crtFlicker {
+    0% { opacity: 0; }
+    5% { opacity: 0.1; }
+    10% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
 /* Neon Text Gradient */
 .neon-blue-text {
     color: #fff;
@@ -342,79 +393,67 @@ body {
     transition: opacity 1s ease;
 }
 
-.intro-title {
-    font-size: 6rem;
-    margin-bottom: 4rem;
-    text-align: center;
-    animation: pulseHeader 3s ease-in-out infinite;
+.intro-bg-gradient {
+    position: absolute;
+    inset: 0;
+    background: #000;
 }
 
-.pill-container {
-    display: flex;
-    gap: 3rem;
+/* Windows 95 Box */
+.win95-box {
+    position: relative;
+    z-index: 10;
+    margin: 0 1rem;
+    max-width: 450px;
+    width: 100%;
 }
 
-.pill {
-    font-family: 'Bangers', cursive;
-    font-size: 3rem;
-    padding: 1.5rem 4rem;
-    border: none;
-    border-radius: 50px;
+.win95-window {
+    background-color: #c0c0c0;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-right: 2px solid #404040;
+    border-bottom: 2px solid #404040;
+    box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.8);
+}
+
+.win95-titlebar {
+    background: linear-gradient(to right, #000080, #1084d0);
+}
+
+.win95-btn {
+    width: 20px;
+    height: 20px;
+    background-color: #c0c0c0;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-right: 2px solid #404040;
+    border-bottom: 2px solid #404040;
     cursor: pointer;
-    transition: all 0.2s;
-    color: #fff;
 }
 
-.green-pill {
-    background-color: #39FF14;
-    box-shadow: 0 0 20px #39FF14;
+.win95-btn:active {
+    border-top: 2px solid #404040;
+    border-left: 2px solid #404040;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
 }
 
-.red-pill {
-    background-color: #FF0000;
-    box-shadow: 0 0 20px #FF0000;
+.win95-action-btn {
+    background-color: #c0c0c0;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-right: 2px solid #404040;
+    border-bottom: 2px solid #404040;
+    transition: all 0.1s;
 }
 
-.pill:hover {
-    transform: scale(1.1);
-}
-
-.green-pill:hover { box-shadow: 0 0 40px #39FF14; }
-.red-pill:hover { box-shadow: 0 0 40px #FF0000; }
-
-.pill:active {
-    transform: scale(0.95);
-}
-
-/* Jumpscare Screen */
-#jumpscare-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: red;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 2000;
-    animation: flash 0.1s infinite;
-}
-
-.jumpscare-text {
-    font-size: 15rem;
-    color: #fff;
-    -webkit-text-stroke: 4px #000;
-    text-shadow: 10px 10px 0 #000;
-    text-align: center;
-    line-height: 1;
-    transform: rotate(-10deg);
-}
-
-@keyframes flash {
-    0% { background-color: red; }
-    50% { background-color: black; }
-    100% { background-color: white; }
+.win95-action-btn:active {
+    border-top: 2px solid #404040;
+    border-left: 2px solid #404040;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    background-color: #d4d0c8;
 }
 
 /* Responsive */

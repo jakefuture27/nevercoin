@@ -12,19 +12,40 @@
 </head>
 <body>
     <div class="star-texture"></div>
+    <div class="crt-tint" aria-hidden="true"></div>
+    <div class="crt-scanlines" aria-hidden="true"></div>
+    <div class="crt-phosphor" aria-hidden="true"></div>
+    <div class="crt-vignette" aria-hidden="true"></div>
+    <div class="crt-flicker" aria-hidden="true"></div>
 
-    <!-- Intro Screen -->
+    <!-- Intro Screen (Windows 95) -->
     <div id="intro-screen">
-        <h1 class="intro-title neon-blue-text">MAKE YOUR CHOICE</h1>
-        <div class="pill-container">
-            <button id="hold-pill" class="pill green-pill">LIVE</button>
-            <button id="miss-out-pill" class="pill red-pill">GIVE UP</button>
+        <div class="intro-bg-gradient"></div>
+        <div class="intro-bg-glow"></div>
+        
+        <div class="win95-box z-10 w-full max-w-md mx-4">
+            <div class="win95-window shadow-2xl">
+                <div class="win95-titlebar px-2 py-1 flex items-center justify-between select-none">
+                    <span class="text-white text-sm font-bold tracking-wide" style="font-family: 'Comic Neue', monospace;">system_warning.exe</span>
+                    <div class="win95-controls flex gap-1">
+                        <button class="win95-btn text-xs flex items-center justify-center text-black">_</button>
+                        <button class="win95-btn text-xs flex items-center justify-center text-black">□</button>
+                        <button class="win95-btn text-xs flex items-center justify-center text-black font-bold">x</button>
+                    </div>
+                </div>
+                <div class="win95-content p-6 flex flex-col items-center gap-5 text-center">
+                    <p class="text-black text-sm leading-relaxed" style="font-family: 'Comic Neue', monospace; font-size: 1.2rem;">
+                        The charts are bleeding. The trenches are dark.<br>Have you given up?
+                    </p>
+                    <p class="text-black font-bold text-sm" style="font-family: 'Comic Neue', monospace; font-size: 1.2rem;">
+                        Are you ready to hold the line?
+                    </p>
+                    <button id="enter-btn" class="win95-action-btn px-8 py-2 text-black font-bold text-sm tracking-wider cursor-pointer" style="font-family: 'Comic Neue', monospace; font-size: 1.5rem;">
+                        I WILL NEVER GIVE UP
+                    </button>
+                </div>
+            </div>
         </div>
-    </div>
-
-    <!-- Jumpscare Screen -->
-    <div id="jumpscare-screen" style="display: none;">
-        <h1 class="jumpscare-text">NEVER GIVE UP!</h1>
     </div>
 
     <!-- Main Site Content (Hidden Initially) -->
